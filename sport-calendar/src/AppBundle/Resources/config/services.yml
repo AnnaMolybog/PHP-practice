@@ -1,0 +1,13 @@
+services:
+    exercise_gateway:
+        class: AppBundle\Gateway\ExerciseGateway
+        arguments:
+            - '@doctrine.orm.entity_manager'
+
+    exercise_service:
+        class: AppBundle\Service\ExerciseService
+        arguments:
+            - '@exercise_gateway'
+
+    exercises_presenter:
+        class: AppBundle\Presenter\ExercisesPresenter

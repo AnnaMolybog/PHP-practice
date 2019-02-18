@@ -1,0 +1,16 @@
+app:
+    resource: '@AppBundle/Resources/config/routing.yml'
+    prefix: /{_locale}
+    requirements:
+        _locale: en|ru
+
+login:
+    path: /login
+    defaults: { _controller: 'AppBundle:Security:login'}
+    methods: [GET]
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

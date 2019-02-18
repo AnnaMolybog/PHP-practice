@@ -1,0 +1,26 @@
+{% extends "@App/layout.html.twig" %}
+{% block exercises %}
+    <div class="row">
+        <div class="col-md-4">
+            <div>{% trans %}app.two_weeks{% endtrans %}</div>
+            <hr>
+            {% for exercise in exercises.twoWeeks %}
+                <div>{{ exercise.description }} {{ exercise.weight }} X {{ exercise.timesOfExercise }}</div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            <div>{% trans %}app.one_week{% endtrans %}</div>
+            <hr>
+            {% for exercise in exercises.oneWeek %}
+                <div>{{ exercise.description }} {{ exercise.weight }} X {{ exercise.timesOfExercise }}</div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            <div>{% trans %}app.today{% endtrans %}</div>
+            <hr>
+            {% for exercise in exercises.today %}
+                <div>{{ exercise.description }} {{ exercise.weight }} X {{ exercise.timesOfExercise }} {{ exercise.exerciseDate.date }}</div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+parameters:
+  descriptions:
+    - Chest Press
+    - Pullover
+    - Biceps Curl
+AppBundle\Entity\Exercise:
+    exercise_{1..300}:
+        description: <randomElement(<{descriptions}>)>
+        weight: <numberBetween(20,200)>
+        times_of_exercise: <numberBetween(5,15)>
+        exercise_date: <dateTimeBetween("-30 days", "+10 days")>
+        exercise_time: <dateTimeBetween("-30 days", "+10 days")>
+        user: '@user_<numberBetween(1,3)>'

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{ path('exercises', {'_locale': 'en'}) }}">en</a> | <a href="{{ path('exercises', {'_locale': 'ru'}) }}">ru</a>
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="{{ path('logout') }}">{% trans %}app.logout{% endtrans %}</a>
+            </div>
+        </div>
+        <div>
+            <h3>{% trans %}app.greeting{% endtrans %} {{ user.userName }} </h3>
+        </div>
+        <div>
+            <p>{% trans %}app.exercise_page.description{% endtrans %}</p>
+        </div>
+        {% block exercises %}
+        {% endblock %}
+    </div>
+{% endblock %}

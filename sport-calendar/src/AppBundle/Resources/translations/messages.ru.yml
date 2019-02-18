@@ -1,0 +1,6 @@
+app.logout: 'Выход'
+app.greeting: 'Добро пожаловать'
+app.exercise_page.description: 'Тренировки за последнии 3 недели'
+app.two_weeks: 'Две недели назад'
+app.one_week: 'Одна неделя назад'
+app.today: 'Сегодня'

@@ -1,0 +1,6 @@
+app.logout: 'Logout'
+app.greeting: 'Welcome'
+app.exercise_page.description: 'Check what you did in last 3 trainings'
+app.two_weeks: '2 weeks ago'
+app.one_week: 'week ago'
+app.today: 'today'

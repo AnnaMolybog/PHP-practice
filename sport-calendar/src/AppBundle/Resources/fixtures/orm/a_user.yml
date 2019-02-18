@@ -1,0 +1,18 @@
+parameters:
+  username:
+    - Anna
+    - Slava
+    - Chendler
+AppBundle\Entity\User:
+    user_1:
+        username: 'Anna'
+        password: "anna"
+        role: 'ROLE_USER'
+    user_2:
+        username: 'Slava'
+        password: "slava"
+        role: 'ROLE_USER'
+    user_3:
+        username: 'Chendler'
+        password: "chendler"
+        role: 'ROLE_USER'
