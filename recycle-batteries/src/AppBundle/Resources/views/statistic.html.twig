@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-4">
+            <h3>Welcome to Recycle Batteries application</h3>
+            <p>Click <a href="{{ path('add_battery') }}"> here </a> to add batteries to the box</p>
+            {% if data is defined and data is not empty %}
+                <p class="text-center">Statistic</p>
+                <table id="statistic-table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>Battery type</td>
+                            <td>Total count</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for statisticResult in data %}
+                            <tr>
+                                <td>{{ statisticResult.battery.type.typeName }}</td>
+                                <td>{{ statisticResult.quantity }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>Box is empty</p>
+            {% endif %}
+        </div>
+        <div class="col-md-7">
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,23 +1,30 @@
 {
-    "name": "sport-calendar",
+    "name": "root/recycle_batteries",
+    "license": "proprietary",
     "type": "project",
-    "description": "Sport calendar",
     "autoload": {
-        "psr-4": { "": "src/" },
-        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
     },
     "autoload-dev": {
-        "psr-4": { "Tests\\": "tests/" },
-        "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+        "files": [
+            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
+        ]
     },
     "require": {
-        "php": "^7.0",
+        "php": ">=5.5.9",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
-        "doctrine/doctrine-migrations-bundle": "~1.1",
         "doctrine/orm": "^2.5",
         "incenteev/composer-parameter-handler": "^2.0",
-        "phpunit/phpunit": "^6.3",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "symfony/monolog-bundle": "^3.0.2",
@@ -27,16 +34,17 @@
         "twig/twig": "^1.0||^2.0"
     },
     "require-dev": {
-        "doctrine/data-fixtures": "^1.2",
-        "hautelook/alice-bundle": "2.0.0-beta.3",
-        "nelmio/alice": "v3.0.0-beta.3",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
         "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "3.*",
-        "theofidry/alice-data-fixtures": "1.0.0-beta.4",
-        "squizlabs/php_codesniffer": "3.*",
-        "phpmd/phpmd": "2.*",
-        "sebastian/phpcpd": "2.*",
-        "phpunit/phpunit": "6.*"
+        "symfony/phpunit-bridge": "^3.0",
+        "phpunit/phpunit": "~5.7.0",
+        "phpmd/phpmd" : "^2.6",
+        "phpunit/phpunit-selenium": "~3.0",
+        "symfony/var-dumper": "^3.2",
+        "pdepend/pdepend": "^2.5",
+        "phploc/phploc": "^3.0",
+        "squizlabs/php_codesniffer": "^2.6",
+        "sebastian/phpcpd": "^3.0"
     },
     "scripts": {
         "symfony-scripts": [
@@ -55,9 +63,6 @@
         ]
     },
     "config": {
-        "platform": {
-            "php": "7.0"
-        },
         "sort-packages": true
     },
     "extra": {
@@ -68,10 +73,8 @@
         "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/common/parameters.yml"
+            "file": "app/config/parameters.yml"
         },
-        "branch-alias": {
-            "dev-master": "3.2-dev"
-        }
+        "branch-alias": null
     }
 }

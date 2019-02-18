@@ -1,0 +1,17 @@
+services:
+    forms.field.battery_type_choice:
+        class: 'AppBundle\Form\Field\BatteryTypeChoice'
+        arguments:
+            - '@service.type_service'
+        tags:
+            - { name: 'form.type' }
+
+    service.type_service:
+        class: 'AppBundle\Service\TypeService'
+        arguments:
+            - '@doctrine.orm.entity_manager'
+
+    service.batteries_service:
+        class: 'AppBundle\Service\BatteriesService'
+        arguments:
+            - '@doctrine.orm.entity_manager'

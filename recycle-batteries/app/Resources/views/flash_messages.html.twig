@@ -1,0 +1,13 @@
+{% if app.request.hasPreviousSession %}
+    {% for flashMessage in app.session.flashbag.get(constant('AppBundle\\Controller\\DefaultController::FLASH_SUCCESS')) %}
+        <div class="alert alert-dismissable alert-success">
+            {{ flashMessage|trans }}<br>
+        </div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get(constant('AppBundle\\Controller\\DefaultController::FLASH_ERROR')) %}
+        <div class="alert alert-dismissable alert-danger">
+            {{ flashMessage|trans }}<br>
+        </div>
+    {% endfor %}
+{% endif %}
