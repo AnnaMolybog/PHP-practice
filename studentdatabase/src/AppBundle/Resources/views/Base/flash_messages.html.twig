@@ -1,0 +1,28 @@
+{% macro render_message(message, class_name) %}
+    {% if class_name is not empty %}
+        <div class="{{ class_name }}">
+            {% if message is iterable and message.message is defined and message.replacements is defined %}
+                {{ message.message|trans(message.replacements) }}
+            {% else %}
+                {{ message|trans }}
+            {% endif %}
+        </div>
+    {% endif %}
+{% endmacro render_message %}
+
+{% import _self as flash %}
+
+{% if app.request.hasPreviousSession %}
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        {{ flash.render_message(flashMessage, 'alert alert-success') }}
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        {{ flash.render_message(flashMessage, 'alert alert-danger') }}
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('warning') %}
+        {{ flash.render_message(flashMessage, 'alert alert-warning') }}
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        {{ flash.render_message(flashMessage, 'alert alert-info') }}
+    {% endfor %}
+{% endif %}

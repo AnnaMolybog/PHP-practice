@@ -1,0 +1,9 @@
+app_home:
+    path: /
+    defaults: { _controller: 'App\AppBundle\Controller\HomePageController:indexAction' }
+    methods: [GET]
+
+app_details:
+    path: /students/detail/{path}
+    defaults: { _controller: 'App\AppBundle\Controller\StudentController:detailsAction' }
+    methods: [GET]

@@ -1,0 +1,5 @@
+App\AppBundle\Entity\Student:
+  student_{1..25000}:
+     name: '<firstName()> <lastName()>'
+     description: '<realText(500)>'
+     path: ''

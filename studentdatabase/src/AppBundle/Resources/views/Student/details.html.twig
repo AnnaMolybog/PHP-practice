@@ -1,0 +1,7 @@
+{% extends '@App/Base/base.html.twig' %}
+{% block page_header %}{{ service_name }}{% endblock %}
+{% block content %}
+    <h1>{{ student.name }}</h1>
+    <p>{{ student.description }}</p>
+    <p>{{ "now"|date("Y-m-d H:i:s") }}</p>
+{% endblock content %}

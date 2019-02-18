@@ -1,0 +1,6 @@
+twig:
+    globals:
+        service_name: 'Students database'
+        enviroment: "%kernel.environment%"
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"

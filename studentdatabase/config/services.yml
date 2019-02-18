@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        public: false
+        autoconfigure: true
+
+    App\AppBundle\:
+        resource: '../src/AppBundle/*'
+        exclude: '../src/{Entity,Tests}'
+
+    App\AppBundle\Controller\:
+        resource: '../src/AppBundle/Controller/*'
+        tags: ['controller.service_arguments']

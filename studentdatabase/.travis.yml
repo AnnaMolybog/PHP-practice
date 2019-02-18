@@ -1,0 +1,11 @@
+language: php
+php:
+  - "7.1"
+install:
+  - composer self-update
+  - composer install
+script:
+  - phpunit
+  - vendor/bin/phpcs --standard=psr2 src
+  - vendor/bin/phpmd src text cleancode, codesize, controversial, design, unusedcode
+  - vendor/bin/phpcpd src
