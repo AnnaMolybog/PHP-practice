@@ -1,0 +1,6 @@
+{% set active_page = 'dwd_admin_homepage' %}
+{% extends '@App/Base/base.html.twig' %}
+{% block page_header %}{{ service_name }}{% endblock %}
+{% block content %}
+    <a href="{{ path("sonata_admin_dashboard") }}">Go to Admin page</a>
+{% endblock content %}

@@ -1,0 +1,3 @@
+dwd_admin_homepage:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /

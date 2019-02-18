@@ -1,0 +1,3 @@
+controllers:
+    resource: ../../src/AppBundle/Controller/
+    type: annotation

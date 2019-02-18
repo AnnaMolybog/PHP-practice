@@ -1,0 +1,4 @@
+dwd_home:
+    path: /
+    defaults: { _controller: 'App\AppBundle\Controller\HomePageController:indexAction' }
+    methods: [GET]

@@ -1,0 +1,5 @@
+App\AppBundle\Entity\JamJar:
+    jam_jar{1..10}:
+        type: '@type*'
+        yearOfProduction: '@year*'
+        comment: '50%? Comment'

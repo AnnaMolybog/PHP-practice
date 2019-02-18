@@ -1,0 +1,7 @@
+App\AppBundle\Entity\JamType:
+    type1:
+        name: "Cherry jam"
+    type2:
+        name: "Strawberry jam"
+    type3:
+        name: "Apple jam"

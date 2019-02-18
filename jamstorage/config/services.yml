@@ -1,0 +1,31 @@
+services:
+    _defaults:
+        autowire: true
+        public: false
+        autoconfigure: true
+
+    App\AppBundle\:
+        resource: '../src/AppBundle/*'
+        exclude: '../src/{Entity,Tests}'
+
+    App\AppBundle\Controller\:
+        resource: '../src/AppBundle/Controller/*'
+        tags: ['controller.service_arguments']
+
+    App\AppBundle\Admin\JamTypeAdmin:
+        arguments: [~, App\AppBundle\Entity\JamType, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: JamType }
+        public: true
+
+    App\AppBundle\Admin\ProductionYearAdmin:
+        arguments: [~, App\AppBundle\Entity\ProductionYear, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: ProductionYear }
+        public: true
+
+    App\AppBundle\Admin\JamJarAdmin:
+        arguments: [~, App\AppBundle\Entity\JamJar, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: JamJar }
+        public: true
